@@ -1,3 +1,119 @@
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body, #root, .container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: black;
+  font-weight: 700;
+}
+
+p {
+  color: rgb(150 151 156);
+  font-weight: 500;
+}
+
+.pagecomponent {
+  background-image: url(../assets/images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10em;
+}
+
+.pageindex {
+  display: flex;
+  width: 60%;
+  height: 50%;
+  justify-content: space-evenly;
+}
+
+#i1, #i2, #i3, #i4 {
+  color: white;
+  border: 1px solid white;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+  height: 2.5em;
+  width: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+#i1-active, #i2-active, #i3-active, #i4-active {
+  color: black;
+  border: none;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+  height: 2.5em;
+  width: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background-color: rgb(189 226 254);
+}
+
+form {
+  background-color: rgb(237 244 254);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.form-inputpart {
+  background-color: white;
+  width: 90%;
+  position: relative;
+  bottom: 3.5em;
+  padding: 1em 2em 3em 2em;
+  border-radius: 1em;
+}
+
+.form-submitpart {
+  background-color: white;
+  width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+button {
+  margin-right: 2.5em;
+  background-color: rgb(5 40 88);
+  color: white;
+  border: none;
+  padding: 0.5em 0.75em 0.5em 0.75em;
+  border-radius: 0.5em;
+}
+
 input, label {
   display:block;
+  width: 100%;
+}
+
+input {
+  height: 3em;
+  margin-top: 0.25em;
+  margin-bottom: 1em;
+  border: 1px solid rgb(123 141 154);
+  background-color: white;
+  border-radius: 0.5em;
+  padding-left: 1em;
 }

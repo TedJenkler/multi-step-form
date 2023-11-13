@@ -1,12 +1,14 @@
 
-const Pages = () => {
+const Pages = (props) => {
 return(
-    <>
-    <h1>1</h1>
-    <h1>2</h1>
-    <h1>3</h1>
-    <h1>4</h1>
-    </>
+    <div className="row pagecomponent">
+        <div className="pageindex">
+            {props.page == 1 ? <span id="i1-active">1</span> : <span id="i1">1</span> }
+            <span id="i2">2</span>
+            <span id="i3">3</span>
+            <span id="i4">4</span>
+        </div>
+    </div>
 )
 }
 

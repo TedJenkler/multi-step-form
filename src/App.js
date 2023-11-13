@@ -8,12 +8,12 @@ function App() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
-  const [page, setPage] = useState("1")
+  const [page, setPage] = useState(1)
   return (
-  <>
-    <Pages />
+  <div className='container'>
+    <Pages page={page} />
     <Form1 name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} setPage={setPage} />
-  </>
+  </div>
   );
 }
 
