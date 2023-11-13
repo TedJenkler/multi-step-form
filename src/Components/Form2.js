@@ -1,11 +1,8 @@
-
-
-
-const Form1 = (props) => {
+const Form2 = (props) => {
 
     const handlesubmit = (e) => {
         e.preventDefault()
-        props.setPage(2)
+        props.setPage(3)
     }
 return(<>
     <form onSubmit={handlesubmit}>
@@ -28,4 +25,4 @@ return(<>
 )
 }
 
-export default Form1
+export default Form2
