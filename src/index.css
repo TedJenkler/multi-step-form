@@ -21,7 +21,7 @@ p {
 }
 
 .pagecomponent {
-  background-image: url(../assets/images/bg-sidebar-mobile.svg);
+  background-image: url(./images/bg-sidebar-mobile.svg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -116,4 +116,35 @@ input {
   background-color: white;
   border-radius: 0.5em;
   padding-left: 1em;
+}
+
+/* Page 2 */
+
+.price {
+  width: 100%;
+  height: 4em;
+  margin: 1em 0 1em 0;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid black;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.price > div > p {
+  margin: 0 0 0 1em;
+}
+
+.checkarea {
+  width: 100%;
+  height: 2.5em;
+}
+
+.label-left {
+  display: inline;
+  float: left
+}
+
+.label-right {
+  display: inline;
 }
