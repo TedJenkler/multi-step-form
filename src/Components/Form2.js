@@ -25,25 +25,25 @@ return(<>
         <button onClick={(e) => {setCart(toggle === false ? "arcade" : "arcadex12")}} value={cart} className="price">
             <img src={arcade} alt="Arcade"></img>
             <div>
-                <p>Arcade</p>
+                <p className="bluetext">Arcade</p>
                 <p>{toggle === false ? "$9/mo" : "$90/yr" }</p>
-                <p>{toggle === false ? null : "2 months free" }</p>
+                <p className="bluetext">{toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
         <button onClick={(e) => {setCart(toggle === false ? "advanced" : "advancedx12")}} value={cart} className="price">
             <img src={advanced} alt="Advanced"></img>
             <div>
-                <p>Advanced</p>
+                <p className="bluetext">Advanced</p>
                 <p>{toggle === false ? "$12/mo" : "$120/yr" }</p>
-                <p>{toggle === false ? null : "2 months free" }</p>
+                <p className="bluetext">{toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
         <button onClick={(e) => {setCart(toggle === false ? "pro" : "prox12")}} value={cart} className="price">
             <img src={pro} alt="Pro"></img>
             <div>
-                <p>Pro</p>
+                <p className="bluetext">Pro</p>
                 <p>{toggle === false ? "$15/mo" : "$150/yr" }</p>
-                <p>{toggle === false ? null : "2 months free" }</p>
+                <p className="bluetext">{toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
     <div className="form-check form-switch checkarea">
@@ -53,6 +53,7 @@ return(<>
         </div>
     </div>
         <div className="form-submitpart">
+            {props.page >= 2 ? <button onClick={(e) => {props.setPage(1)}} className="backbtn">Go Back</button> : null }
             <button onClick={handlesubmit}>Next Step</button>
         </div>
     </form>

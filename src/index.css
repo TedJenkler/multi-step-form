@@ -90,12 +90,12 @@ form {
   width: 100%;
   height: 5em;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
 button {
-  margin-right: 2.5em;
+  margin-right: 1em;
   background-color: rgb(5 40 88);
   color: white;
   border: none;
@@ -130,28 +130,51 @@ input {
   border: 1px solid rgb(123 141 154);
   margin: 1em 0 1em 0;
   padding: 0.75em;
+  text-align: start;
 }
 
 .price > div > p {
   margin: 0 0 0 1em;
 }
 
+.bluetext {
+  color: rgb(30 54 88);
+  font-weight: 700;
+}
+
 .checkarea {
   width: 100%;
-  height: 2em;
+  height: 3em;
   background-color: rgb(248 249 254);
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding-top: 0.5em;
 }
 
 .float-left {
   float: inline-start;
   width: 7em;
+  font-weight: 700;
 }
 
 .float-right {
   float: inline-start;
   width: 7em;
   margin-left: 1em;
+  font-weight: 700;
+}
+
+.form-switch .form-check-input {
+  background-color: rgb(3 40 90);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4' fill='white'/%3e%3c/svg%3e") !important;
+}
+
+.backbtn {
+  background-color: white;
+  color: grey;
+  font-weight: 700;
+}
+
+.hidden {
+  visibility: hidden;
 }

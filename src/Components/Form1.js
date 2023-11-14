@@ -21,6 +21,7 @@ return(<>
         <input onChange={(e) => {props.setPhone(e.target.value)}} value={props.phone} placeholder="+1 234 567 890"></input>
     </div>
         <div className="form-submitpart">
+            {false ? <button className="backbtn">Go Back</button> : <button className="backbtn hidden">Go Back</button> }
             <button onClick={handlesubmit}>Next Step</button>
         </div>
     </form>
