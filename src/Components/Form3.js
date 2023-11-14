@@ -29,7 +29,7 @@ return(<>
                 <p className="bluetext">Online Services</p>
                 <p>Access to multiplayer games</p>
             </div>
-            <p>+$1/mo</p>
+            <p>{props.toggle === false ? "$1/mo" : "$10/yr" }</p>
         </div>
         <div className="price-addon">
             <input type="checkbox" onChange={(e) => {setStorage(!storage)}} value={storage} className="addon-checkbox" name="addon"></input>
@@ -37,7 +37,7 @@ return(<>
                 <p className="bluetext">Larger storage</p>
                 <p>Extra 1TB of cloud</p>
             </div>
-            <p>+$2/mo</p>
+            <p>{props.toggle === false ? "$2/mo" : "$20/yr" }</p>
         </div>
         <div className="price-addon">
             <input type="checkbox" onChange={(e) => {setCustomProfile(!customProfile)}} value={customProfile} className="addon-checkbox" name="addon"></input>
@@ -45,7 +45,7 @@ return(<>
                 <p className="bluetext">Customizable Profile</p>
                 <p>Custom theme on your profile</p>
             </div>
-            <p>+$2/mo</p>
+            <p>{props.toggle === false ? "$2/mo" : "$20/yr" }</p>
         </div>
     </div>
         <div className="form-submitpart">

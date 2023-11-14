@@ -12,12 +12,13 @@ function App() {
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [page, setPage] = useState(1)
+  const [toggle, setToggle] = useState(false)
   return (
   <div className='container'>
     <Pages page={page} />
     {page === 1 ? <Form1 name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} setPage={setPage} /> : null}
-    {page === 2 ? <Form2 setPage={setPage} page={page} /> : null}
-    {page === 3 ? <Form3 setPage={setPage} /> : null}
+    {page === 2 ? <Form2 setPage={setPage} page={page} toggle={toggle} setToggle={setToggle} /> : null}
+    {page === 3 ? <Form3 setPage={setPage} toggle={toggle} setToggle={setToggle} /> : null}
     {page === 4 ? <Form4 setPage={setPage} /> : null}
   </div>
   );
