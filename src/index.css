@@ -206,3 +206,22 @@ input {
   width: 1em;
   height: 1em;
 }
+
+/* summary */
+
+.summary {
+  background-color: rgb(248 249 254);
+
+}
+
+.summary > p {
+  color: black;
+}
+
+.summary > a > p {
+  text-decoration: underline;
+}
+
+.mathblock {
+  visibility: hidden;
+}

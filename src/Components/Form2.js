@@ -1,12 +1,8 @@
 import arcade from "../images/icon-arcade.svg"
 import advanced from "../images/icon-advanced.svg"
 import pro from "../images/icon-pro.svg"
-import { useState } from "react"
 
 const Form2 = (props) => {
-    const [cart, setCart] = useState("")
-
-    console.log(cart)
     const handlesubmit = (e) => {
         e.preventDefault()
         props.setPage(3)
@@ -16,12 +12,14 @@ const Form2 = (props) => {
         e.preventDefault()
     }
 
+    console.log(props.cart)
+
 return(<>
     <form onSubmit={stoprefresh}>
     <div className="form-inputpart">
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
-        <button onClick={(e) => {setCart(props.toggle === false ? "arcade" : "arcadex12")}} value={cart} className="price">
+        <button onClick={(e) => {props.setCart(props.toggle === false ? "arcade (Monthly)" : "arcade (Yearly)");}} value={props.cart} className="price">
             <img src={arcade} alt="Arcade"></img>
             <div>
                 <p className="bluetext">Arcade</p>
@@ -29,7 +27,7 @@ return(<>
                 <p className="bluetext">{props.toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
-        <button onClick={(e) => {setCart(props.toggle === false ? "advanced" : "advancedx12")}} value={cart} className="price">
+        <button onClick={(e) => {props.setCart(props.toggle === false ? "advanced (Monthly)" : "advanced (Yearly)")}} value={props.cart} className="price">
             <img src={advanced} alt="Advanced"></img>
             <div>
                 <p className="bluetext">Advanced</p>
@@ -37,7 +35,7 @@ return(<>
                 <p className="bluetext">{props.toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
-        <button onClick={(e) => {setCart(props.toggle === false ? "pro" : "prox12")}} value={cart} className="price">
+        <button onClick={(e) => {props.setCart(props.toggle === false ? "pro (Monthly)" : "pro (Yearly)")}} value={props.cart} className="price">
             <img src={pro} alt="Pro"></img>
             <div>
                 <p className="bluetext">Pro</p>

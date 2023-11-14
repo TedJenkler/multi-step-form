@@ -1,10 +1,5 @@
-import { useState } from "react";
 
 const Form3 = (props) => {
-
-    const [online, setOnline] = useState(false);
-    const [storage, setStorage] = useState(false);
-    const [customProfile, setCustomProfile] = useState(false);
 
     const handlesubmit = (e) => {
         e.preventDefault()
@@ -15,16 +10,13 @@ const Form3 = (props) => {
         e.preventDefault()
     }
 
-    console.log(online)
-    console.log(storage)
-    console.log(customProfile)
-
 return(<>
     <form onSubmit={stoprefresh}>
     <div className="form-inputpart">
+        <h1>Pick add-ons</h1>
         <p>Add-ons help enhance your gaming experience.</p>
         <div className="price-addon">
-            <input type="checkbox" onChange={(e) => {setOnline(!online)}} value={online} className="addon-checkbox" name="addon"></input>
+            <input type="checkbox" onChange={(e) => {props.setOnline(!props.online)}} value={props.online} className="addon-checkbox" name="addon"></input>
             <div>
                 <p className="bluetext">Online Services</p>
                 <p>Access to multiplayer games</p>
@@ -32,7 +24,7 @@ return(<>
             <p>{props.toggle === false ? "$1/mo" : "$10/yr" }</p>
         </div>
         <div className="price-addon">
-            <input type="checkbox" onChange={(e) => {setStorage(!storage)}} value={storage} className="addon-checkbox" name="addon"></input>
+            <input type="checkbox" onChange={(e) => {props.setStorage(!props.storage)}} value={props.storage} className="addon-checkbox" name="addon"></input>
             <div>
                 <p className="bluetext">Larger storage</p>
                 <p>Extra 1TB of cloud</p>
@@ -40,7 +32,7 @@ return(<>
             <p>{props.toggle === false ? "$2/mo" : "$20/yr" }</p>
         </div>
         <div className="price-addon">
-            <input type="checkbox" onChange={(e) => {setCustomProfile(!customProfile)}} value={customProfile} className="addon-checkbox" name="addon"></input>
+            <input type="checkbox" onChange={(e) => {props.setCustomProfile(!props.customProfile)}} value={props.customProfile} className="addon-checkbox" name="addon"></input>
             <div>
                 <p className="bluetext">Customizable Profile</p>
                 <p>Custom theme on your profile</p>
