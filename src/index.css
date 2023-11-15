@@ -207,21 +207,59 @@ input {
   height: 1em;
 }
 
-/* summary */
+/* page 4 summary */
 
 .summary {
   background-color: rgb(248 249 254);
-
+  border-radius: 1em 1em 0 0;
+  padding: 1em 1em 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(240 240 243);
 }
 
-.summary > p {
+.summary > div > p {
   color: black;
+  margin: 0;
+  padding: 0;
 }
 
-.summary > a > p {
+.summary > div > a > p {
   text-decoration: underline;
 }
 
 .mathblock {
   visibility: hidden;
+  height: 0;
+}
+
+.summary-part2 {
+  background-color: rgb(248 249 254);
+  border-radius: 0 0 1em 1em;
+  padding: 1em;
+}
+
+.summary-part2 > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p4-price {
+  color: black;
+  font-weight: 700;
+}
+
+.totalpart {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1em 1em 1em;
+}
+
+.totalprice {
+  color: hsl(243, 100%, 62%);
+}
+
+.btn-confirm {
+  background-color: hsl(243, 100%, 62%);
 }

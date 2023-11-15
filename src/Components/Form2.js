@@ -19,7 +19,7 @@ return(<>
     <div className="form-inputpart">
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
-        <button onClick={(e) => {props.setCart(props.toggle === false ? "arcade (Monthly)" : "arcade (Yearly)");}} value={props.cart} className="price">
+        <button onClick={(e) => {props.setCart(props.toggle === false ? "Arcade (Monthly)" : "Arcade (Yearly)");}} value={props.cart} className="price">
             <img src={arcade} alt="Arcade"></img>
             <div>
                 <p className="bluetext">Arcade</p>
@@ -27,7 +27,7 @@ return(<>
                 <p className="bluetext">{props.toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
-        <button onClick={(e) => {props.setCart(props.toggle === false ? "advanced (Monthly)" : "advanced (Yearly)")}} value={props.cart} className="price">
+        <button onClick={(e) => {props.setCart(props.toggle === false ? "Advanced (Monthly)" : "Advanced (Yearly)")}} value={props.cart} className="price">
             <img src={advanced} alt="Advanced"></img>
             <div>
                 <p className="bluetext">Advanced</p>
@@ -35,7 +35,7 @@ return(<>
                 <p className="bluetext">{props.toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
-        <button onClick={(e) => {props.setCart(props.toggle === false ? "pro (Monthly)" : "pro (Yearly)")}} value={props.cart} className="price">
+        <button onClick={(e) => {props.setCart(props.toggle === false ? "Pro (Monthly)" : "Pro (Yearly)")}} value={props.cart} className="price">
             <img src={pro} alt="Pro"></img>
             <div>
                 <p className="bluetext">Pro</p>
