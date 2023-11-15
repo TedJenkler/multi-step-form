@@ -76,6 +76,24 @@ form {
   justify-content: space-between;
 }
 
+.labelgroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 2em;
+  margin: 0;
+}
+
+.labelgroup > label {
+  width: 50%;
+}
+
+.labelgroup > span {
+  width: 100%;
+  text-align: end;
+  visibility: hidden;
+}
+
 .form-inputpart {
   background-color: white;
   width: 90%;
@@ -280,4 +298,15 @@ input {
 #logo {
   height: 3em;
   margin-bottom: 1em;
+}
+
+/* Validation */
+
+.errorinput {
+  border: 1px solid red;
+}
+
+#error {
+  visibility: unset;
+  color: red;
 }
