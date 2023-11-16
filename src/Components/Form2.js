@@ -19,6 +19,7 @@ return(<>
     <div className="form-inputpart">
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
+        <div className="responisve-page2">
         <button onClick={(e) => {props.setCart(props.toggle === false ? "Arcade (Monthly)" : "Arcade (Yearly)");}} value={props.cart} className="price">
             <img src={arcade} alt="Arcade"></img>
             <div>
@@ -43,6 +44,7 @@ return(<>
                 <p className="bluetext">{props.toggle === false ? null : "2 months free" }</p>
             </div>
         </button>
+        </div>
     <div className="form-check form-switch checkarea">
         <label className="form-check-label float-left" htmlFor="flexSwitchCheckDefault">Monthly</label>
         <input className="form-check-input" onChange={() => {props.setToggle(!props.toggle)}} value={props.toggle} type="checkbox" role="switch" id="flexSwitchCheckDefault" />

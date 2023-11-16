@@ -4,10 +4,11 @@ html {
 }
 
 body, #root, .container {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; 
 }
 
 h1 {
@@ -344,4 +345,120 @@ input {
 
 .btn-confirm:hover {
   opacity: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+  }
+
+  .pagecomponent {
+    background-image: url(./images/bg-sidebar-desktop.svg);
+    background-size: cover;
+    justify-content: unset;
+    align-items: unset;
+    margin: 1em;
+    height: 100%;
+    width: 30%;
+    border-radius: 1em;
+  }
+
+  .pageindex {
+    flex-direction: column;
+    margin-left: 1em;
+  }
+
+  form {
+    background-color: white;
+    width: 70%;
+    justify-content: center;
+  }
+
+  .labelgroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 2em;
+    margin: 0;
+  }
+
+  .responisve-page2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-inputpart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: static;
+    padding: 5em 2em 3em 2em;
+    border-radius: 1em;
+  }
+
+  .form-submitpart {
+   padding: 0  1em 0 1em;
+  }
+
+  /* Page 2 */
+
+  .price {
+    width: 30%;
+    height: 10em;
+    margin: 1em 0 1em 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .price > div > p{
+    margin: 0 0 0 0;
+  }
+
+  .checkarea {
+    margin-top: 2.5em;
+  }
+
+  /* page 3 */
+
+  .price-addon {
+    margin-top: 1em;
+  }
+
+  /* page 4 summary */
+
+  .summary {
+    margin-top: 1em;
+  }
+
+  .summary-part2 {
+    background-color: rgb(248 249 254);
+    border-radius: 0 0 1em 1em;
+    padding: 1em;
+  }
+
+  .p4-price {
+    color: black;
+    font-weight: 700;
+  }
+
+  .totalpart {
+    margin: 2em 1em 1em 1em;
+  }
+
+  .totalprice {
+    color: hsl(243, 100%, 62%);
+  }
+
+  #conformation {
+    justify-content: center;
+  }
 }
