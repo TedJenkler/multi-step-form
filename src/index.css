@@ -26,7 +26,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 10em;
@@ -347,6 +347,18 @@ input {
   opacity: 50%;
 }
 
+/* Responsive */
+
+.responsive-pagecomponent {
+  position: absolute;
+  top: 1px;
+  visibility: hidden;
+}
+
+.responsive-pageindex {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     min-width: 100%;
@@ -364,6 +376,7 @@ input {
     background-size: cover;
     justify-content: unset;
     align-items: unset;
+    flex-direction: column;
     margin: 1em;
     height: 100%;
     width: 30%;
@@ -461,4 +474,35 @@ input {
   #conformation {
     justify-content: center;
   }
+
+  /* Responsive */
+
+.responsive-pageindex {
+  display: flex;
+  margin: 2em 1em 1em 2em;
+  text-align: center;
+}
+
+.responsive-pagecomponent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: static;
+  top: 0;
+  visibility: unset;
+  margin-left: 1em;
+}
+
+.responsive-pagecomponent > p {
+  margin: 0;
+  padding: 0;
+}
+
+.whiteboldtext {
+  color: white;
+}
+
+.pageindex {
+  display: none;
+}
 }
