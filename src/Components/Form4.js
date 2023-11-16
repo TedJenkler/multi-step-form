@@ -23,7 +23,7 @@ return(<>
         <div className="summary">
             <div>
                 <p>{props.cart}</p>
-                <a onClick={(e) => {props.setPage(2)}}><p>Change</p></a>
+                <a onClick={(e) => {props.setPage(2)}}><p id="change">Change</p></a>
             </div>
             <p className="p4-price">
                 {props.cart === "Arcade (Monthly)" ? "$9/mo" : null}
