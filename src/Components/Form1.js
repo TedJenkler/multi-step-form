@@ -9,7 +9,9 @@ const Form1 = (props) => {
 
     useEffect(() => {
         if(props.vName === true && props.vEmail === true && props.vPhone === true){
-            console.log("tf")
+            props.setVName("validation done")
+            props.setVEmail("validation done")
+            props.setVPhone("validation done")
             props.setPage(2)
         }
     }, [handlesubmit])
