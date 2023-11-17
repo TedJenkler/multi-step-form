@@ -6,6 +6,21 @@ const Form4 = (props) => {
         props.setPage(5)
     }
 
+    const linktopage2 = (e) => {
+        props.setToggle(false);
+        props.setOnline(false);
+        props.setStorage(false);
+        props.setCustomProfile(false);
+        props.setPage(2);
+    }
+
+    const handlebackclick = (e) => {
+        props.setOnline(false);
+        props.setStorage(false);
+        props.setCustomProfile(false);
+        props.setPage(3);
+    }
+
     const stoprefresh = (e) => {
         e.preventDefault()
     }
@@ -23,7 +38,7 @@ return(<>
         <div className="summary">
             <div>
                 <p>{props.cart}</p>
-                <a onClick={(e) => {props.setPage(2)}}><p id="change">Change</p></a>
+                <a onClick={linktopage2}><p id="change">Change</p></a>
             </div>
             <p className="p4-price">
                 {props.cart === "Arcade (Monthly)" ? "$9/mo" : null}
@@ -65,7 +80,7 @@ return(<>
         </div>
     </div>
         <div className="form-submitpart">
-            {true ? <button onClick={(e) => {props.setPage(3)}} className="backbtn">Go Back</button> : null }
+            {true ? <button onClick={handlebackclick} className="backbtn">Go Back</button> : null }
             <button className="btn-confirm" onClick={handlesubmit}>Confirm</button>
         </div>
     </form>

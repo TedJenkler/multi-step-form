@@ -6,6 +6,14 @@ const Form3 = (props) => {
         props.setPage(4)
     }
 
+    const handlebackclick = (e) => {
+        props.setToggle(false);
+        props.setOnline(false);
+        props.setStorage(false);
+        props.setCustomProfile(false);
+        props.setPage(2);
+    }
+
     const stoprefresh = (e) => {
         e.preventDefault()
     }
@@ -41,7 +49,7 @@ return(<>
         </label>
     </div>
         <div className="form-submitpart">
-            {true ? <button onClick={(e) => {props.setPage(2)}} className="backbtn">Go Back</button> : null }
+            {true ? <button onClick={handlebackclick} className="backbtn">Go Back</button> : null }
             <button onClick={handlesubmit}>Next Step</button>
         </div>
     </form>

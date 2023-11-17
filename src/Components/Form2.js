@@ -8,11 +8,14 @@ const Form2 = (props) => {
         props.setPage(3)
     }
 
+    const handlebackclick = (e) => {
+        props.setToggle(false);
+        props.setPage(1);
+    }
+
     const stoprefresh = (e) => {
         e.preventDefault()
     }
-
-    console.log(props.cart)
 
 return(<>
     <form onSubmit={stoprefresh}>
@@ -52,7 +55,7 @@ return(<>
         </div>
     </div>
         <div className="form-submitpart">
-            {props.page >= 2 ? <button onClick={(e) => {props.setPage(1)}} className="backbtn">Go Back</button> : null }
+            {props.page >= 2 ? <button onClick={handlebackclick} className="backbtn">Go Back</button> : null }
             <button onClick={handlesubmit}>Next Step</button>
         </div>
     </form>
