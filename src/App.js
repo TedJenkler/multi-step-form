@@ -19,10 +19,16 @@ function App() {
   const [storage, setStorage] = useState(false);
   const [customProfile, setCustomProfile] = useState(false);
 
+  /* Validation */
+  const [vName, setVName] = useState("Before input")
+  const [vEmail, setVEmail] = useState("Before input")
+  const [vPhone, setVPhone] = useState("Before input")
+
+
   return (
   <div className='container'>
     <Pages page={page} />
-    {page === 1 ? <Form1 name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} setPage={setPage} /> : null}
+    {page === 1 ? <Form1 name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} setPage={setPage} vName={vName} setVName={setVName} vEmail={vEmail} setVEmail={setVEmail} vPhone={vPhone} setVPhone={setVPhone} /> : null}
     {page === 2 ? <Form2 setPage={setPage} page={page} toggle={toggle} setToggle={setToggle} cart={cart} setCart={setCart} /> : null}
     {page === 3 ? <Form3 setPage={setPage} setCart={setCart} toggle={toggle} setToggle={setToggle} online={online} setOnline={setOnline} storage={storage} setStorage={setStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} /> : null}
     {page === 4 ? <Form4 setPage={setPage} cart={cart} online={online} setOnline={setOnline} storage={storage} setStorage={setStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} toggle={toggle} setToggle={setToggle} /> : null}
